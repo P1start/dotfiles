@@ -1,0 +1,116 @@
+* {
+    blue:  #0000FF;
+    white: #FFFFFF;
+    black: #000000;
+    grey:  #364041;
+    hl:    #364041;
+    red:   #D63131;
+    text:  #b1bbb8;
+    textSelect: #e2efeb;
+
+    spacing: 2;
+    background-color: #364041ff;
+    text-color: @text;
+    border-color: @hl;
+}
+#window {
+    transparency: "screenshot";
+    background-color: #00000000;
+    border: 0;
+    padding: 0;
+}
+#mainbox {
+    padding: 0px;
+    border: 0;
+    spacing: 1%;
+    background-color: #00000000;
+}
+#message {
+    border: 7px; 
+    padding: 1em; 
+    background-color: @grey; 
+    text-color: @text;
+}
+#textbox normal {
+    text-color: @text;
+    padding: 0;
+    border: 0;
+}
+#listview {
+    fixed-height: 1;
+    border: 7px;
+    padding: 1em;
+    reverse: false;
+
+    columns: 1;
+    background-color: @grey;
+}
+#element {
+    border: 0;
+    padding: 2px;
+    highlight: bold ;
+}
+#element normal.normal {
+    text-color: @text;
+    background-color: #F5F5F500;
+}
+#element normal.urgent {
+    text-color: @red;
+    background-color: #F5F5F500;
+}
+#element normal.active {
+    text-color: @hl;
+    background-color: #F5F5F500;
+}
+#element selected.normal {
+    text-color: @textSelect;
+    background-color: @hl;
+}
+#element selected.urgent {
+    text-color: @textSelect;
+    background-color: @red;
+}
+#element selected.active {
+    text-color: @textSelect;
+    background-color: @hl;
+}
+#element alternate.normal {
+    text-color: @text;
+    background-color: #D0D0D000;
+}
+#element alternate.urgent {
+    text-color: @red;
+    background-color: #D0D0D0FF;
+}
+#element alternate.active {
+    text-color: @text;
+    background-color: @hl;
+}
+#scrollbar {
+    border: 0;
+    padding: 0;
+}
+#inputbar {
+    spacing: 0.5em;
+    border: 7px;
+    padding: 0.5em 1em;
+    background-color: @grey;
+    index: 0;
+}
+#inputbar normal {
+    foreground-color: #002B36FF;
+    background-color: #F5F5F500;
+}
+
+#sidebar {
+    border: 7px;
+    padding: 0.5em 1em;
+    background-color: @grey;
+    index: 10;
+}
+#button selected {
+    text-color: #4271AEFF;
+}
+#entry {
+    text-color: @textSelect;
+}
