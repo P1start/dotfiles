@@ -1,3 +1,5 @@
 polybar/.config/polybar/reminders
 polybar/.config/polybar/reminder-dismissed
 polybar/.config/polybar/timemode
+nvim/.config/nvim/.netrwhist
+nvim/.config/nvim/plugged/
