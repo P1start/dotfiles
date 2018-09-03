@@ -3,3 +3,5 @@ polybar/.config/polybar/reminder-dismissed
 polybar/.config/polybar/timemode
 nvim/.config/nvim/.netrwhist
 nvim/.config/nvim/plugged/
+fish/.config/fish/fishd.*
+fish/.config/fish/fish_history
