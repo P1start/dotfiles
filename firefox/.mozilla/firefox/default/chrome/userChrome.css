@@ -1,0 +1,78 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); 
+@namespace html "http://www.w3.org/1999/xhtml";
+
+#TabsToolbar, #tabbrowser-tabs{
+    background-color: #2a3233 !important;
+    color: #b1bbb8 !important;
+    font-family: "scientifica", monospace !important;
+    font-size: 10px !important;
+    /*filter: grayscale(1) !important;*/
+}
+
+#nav-bar {
+    background-color: #364041 !important;
+    /*filter: grayscale(1) !important;*/
+    box-shadow: none !important;
+}
+
+#toolbar-menubar {
+    background-color: #2a3233 !important;
+}
+
+:root:-moz-lwtheme {
+    --toolbox-border-bottom-color: #364041 !important;
+}
+
+.tab-content[selected] {
+    color: #e2efeb !important;
+    background-color: #364041 !important;
+}
+
+#urlbar {
+    border-radius: 0 !important;
+    font-family: "scientifica", monospace !important;
+    font-size: 10px !important;
+    background-color: #424e50 !important;
+    border-color: #4c595c !important;
+}
+
+#urlbar[focused] {
+    border-color: #5b6c6e !important;
+}
+
+html|*.urlbar-input::-moz-selection {
+    background: #888 !important;
+}
+
+browser {
+    background-color: #364041 !important;
+}
+
+#PopupAutoCompleteRichResult, #PopupAutoCompleteRichResult *.autocomplete-richlistbox, #PopupAutoCompleteRichResult *.autocomplete-richlistitem {
+    border-color: #364041 !important;
+    box-shadow: none !important;
+    font-family: "scientifica", monospace !important;
+    font-size: 10px !important;
+    background-color: #364041 !important;
+}
+
+#PopupAutoCompleteRichResult *.ac-title[selected], #PopupAutoCompleteRichResult *.ac-url[selected], #PopupAutoCompleteRichResult *.ac-action[selected], #PopupAutoCompleteRichResult *.ac-separator[selected] {
+    color: #e2efeb !important;
+}
+
+/* Doesn't seem to work :( */
+#PopupAutoCompleteRichResult *.autocomplete-richlistbox:hover {
+    color: #e2efeb !important;
+}
+
+#PopupAutoCompleteRichResult *.ac-action,
+#PopupAutoCompleteRichResult *.ac-url {
+    /*color: #cbd6d3 !important;*/
+    color: #9ba3a1 !important;
+    font-size: 10px !important;
+    font-family: "scientifica", monospace !important;
+}
+
+#PopupAutoCompleteRichResult *.ac-title {
+    color: #b1bbb8 !important;
+}

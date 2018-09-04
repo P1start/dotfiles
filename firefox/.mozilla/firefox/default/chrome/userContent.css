@@ -1,0 +1,8 @@
+body.activity-stream {
+    overflow-y: auto !important;
+    background: #364041 !important;
+}
+
+body.activity-stream * {
+    display: none !important;
+}
