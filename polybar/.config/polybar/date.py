@@ -23,7 +23,7 @@ def card_character(suit, value):
         value += 1
     return chr(0x1F0A1 + 16*suit + value)
 
-weekdays = ['☾', '♂', '☿', '♃', '♀', '♄', '%{T3}☉%{T1}']
+weekdays = ['☾', '♂', '☿', '♃', '♀', '♄', '%{T6}☉%{T1}']
 suits = '♠♡♢♣'
 values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']
 
