@@ -1,0 +1,3 @@
+#!/bin/bash
+# lies
+exec nvim ~/org/main.org

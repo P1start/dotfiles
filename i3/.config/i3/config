@@ -181,19 +181,13 @@ exec --no-startup-id charmap
 exec --no-startup-id i3-msg 'workspace 2; exec --no-startup-id ~/bin/term -e nvim; workspace 10; exec --no-startup-id ~/bin/term -e ~/bin/emacs-org; exec --no-startup-id anki; workspace 9; exec --no-startup-id ~/bin/term -e ncmpcpp'
 
 # Start up Redshift
-#exec --no-startup-id redshift -l -43.5300:172.6203
+exec --no-startup-id redshift
 
 # Start up network manager applet
 #exec nm-applet
 
 # Keyboard settings
 exec --no-startup-id Setxkbmap us_mod
-
-# Volume whatsit
-#exec pa-applet
-
-# Lid close script
-exec --no-startup-id ~/bin/export_x_info
 
 # Hide borders
 hide_edge_borders both

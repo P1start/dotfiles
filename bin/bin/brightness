@@ -1,0 +1,12 @@
+#!/bin/bash
+
+case $1 in
+    "inc")
+	xbacklight -inc 5
+        brightness="$(cat /sys/class/backlight/intel_backlight/brightness)"
+        echo $((brightness + 50)) > /sys/class/backlight/intel_backlight/brightness;;
+    "dec")
+	xbacklight -dec 5
+        brightness="$(cat /sys/class/backlight/intel_backlight/brightness)"
+        echo $((brightness - 50)) > /sys/class/backlight/intel_backlight/brightness;;
+esac

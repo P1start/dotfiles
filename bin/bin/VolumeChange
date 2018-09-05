@@ -1,0 +1,20 @@
+#!/bin/bash
+
+case $1 in
+    toggleMute)
+        pactl -- set-sink-mute 0 toggle
+        ;;
+    volumeUp)
+        pactl -- set-sink-volume 0 +$2
+        __VOLUME=$(pactl list sinks | grep '^[[:space:]]Volume:' |     head -n $(( $SINK + 1 )) | tail -n 1 | sed -e 's,.*: \([0-9][0-9]*\).*,\1,')
+        if [ $__VOLUME -gt 65540 ]; then
+            pactl -- set-sink-volume 0 65540
+        fi
+        ;;
+    volumeDown)
+        pactl -- set-sink-volume 0 -$2
+        ;;
+    *)
+        exit -1
+        ;;
+esac
