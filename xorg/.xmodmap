@@ -1,0 +1,12 @@
+keycode 135 = ISO_Level3_Shift
+
+remove Lock = Caps_Lock
+remove mod5 = ISO_Level3_Shift
+keysym ISO_Level3_Shift = Caps_Lock
+keysym Caps_Lock = ISO_Level3_Shift
+add Lock = Caps_Lock
+
+keycode 66 = Escape
+remove mod5 = Escape
+add mod5 = ISO_Level3_Shift
+keycode 9 = Multi_key
