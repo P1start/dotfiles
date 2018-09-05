@@ -1,4 +1,5 @@
 #!/usr/bin/env fish
+set -x XDG_CONFIG_HOME ~/.config
 umask 0022
 set PATH ~/.cargo/bin $PATH
 set PATH ~/bin $PATH
