@@ -5,3 +5,5 @@ nvim/.config/nvim/.netrwhist
 nvim/.config/nvim/plugged/
 fish/.config/fish/fishd.*
 fish/.config/fish/fish_history
+gtk/.config/gtk-3.0/bookmarks
+gtk/.config/gtk-2.0/gtkfilechooser.ini
