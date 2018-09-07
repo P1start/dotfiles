@@ -42,7 +42,7 @@ scrollback_lines = -1
 background = #364041
 unfocused_background = #2a3233
 foreground = #b1bbb8
-cursor = #b1bbb8
+#cursor = #b1bbb8
 
 color0 = #364041
 color1 = #9E6F58

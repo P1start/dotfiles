@@ -217,6 +217,7 @@ assign [class="Thunderbird"] 12
 
 # Hide titlebars, set window borders
 for_window [class="^.*"] border pixel 5
+for_window [class="Termite"] border none
 
 # Title bar format
 for_window [class=".*"] title_format "  %title  "
