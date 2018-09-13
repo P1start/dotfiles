@@ -124,6 +124,8 @@ bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+minus move container to workspace number 11
 bindsym $mod+Shift+equal move container to workspace number 12
 
+bindsym Pause exec --no-startup-id ~/bin/onpause
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -247,13 +249,9 @@ bindsym $mod+F7 exec --no-startup-id Setxkbmap ussr
 bindsym $mod+F8 exec --no-startup-id Setxkbmap en_futhark
 bindsym $mod+F9 exec --no-startup-id Setxkbmap ru
 
-bindsym $mod+Pause exec --no-startup-id mpc --host=/tmp/mpd.sock prev
 bindsym XF86AudioPrev exec --no-startup-id mpc --host=/tmp/mpd.sock prev
-bindsym $mod+Print exec --no-startup-id mpc --host=/tmp/mpd.sock toggle
 bindsym XF86AudioPlay exec --no-startup-id mpc --host=/tmp/mpd.sock toggle
-bindsym $mod+Shift+Print exec --no-startup-id mpc --host=/tmp/mpd.sock stop
 bindsym XF86AudioStop exec --no-startup-id mpc --host=/tmp/mpd.sock stop
-bindsym $mod+Delete exec --no-startup-id mpc --host=/tmp/mpd.sock next
 bindsym XF86AudioNext exec --no-startup-id mpc --host=/tmp/mpd.sock next
 
 bindsym $mod+ctrl+l exec --no-startup-id i3lock-wrapper
