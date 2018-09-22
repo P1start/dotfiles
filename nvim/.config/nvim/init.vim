@@ -141,3 +141,5 @@ highlight ColorColumn none
 highlight GitGutterAdd ctermfg=yellow
 highlight GitGutterChange ctermfg=green
 highlight GitGutterChangeDelete ctermfg=green
+
+let g:vimtex_view_general_viewer="evince"
