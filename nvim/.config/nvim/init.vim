@@ -75,7 +75,12 @@ map <M-7> :tabn 7<cr>
 map <M-8> :tabn 8<cr>
 map <M-9> :tablast<cr>
 
-set nohlsearch
+set hlsearch
+cnoremap <silent> <Return> <cr>:noh<cr>
+nnoremap <silent> n n:noh<cr>
+nnoremap <silent> N N:noh<cr>
+nnoremap <silent> * *:noh<cr>
+nnoremap <silent> # #:noh<cr>
 
 map <M-t> :tabnew<cr>
 map <M-w> :tabclose<cr>
