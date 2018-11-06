@@ -159,3 +159,38 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ]
     \}
+
+let g:LanguageClient_diagnosticsDisplay = {
+   \    1: {
+   \        "name": "Error",
+   \        "texthl": "ALEError",
+   \        "signText": "*",
+   \        "signTexthl": "ALEErrorSign",
+   \    },
+   \    2: {
+   \        "name": "Warning",
+   \        "texthl": "ALEWarning",
+   \        "signText": "!",
+   \        "signTexthl": "ALEWarningSign",
+   \    },
+   \    3: {
+   \        "name": "Information",
+   \        "texthl": "ALEInfo",
+   \        "signText": "?",
+   \        "signTexthl": "ALEInfoSign",
+   \    },
+   \    4: {
+   \        "name": "Hint",
+   \        "texthl": "ALEInfo",
+   \        "signText": "?",
+   \        "signTexthl": "ALEInfoSign",
+   \    },
+   \}
+
+highlight ALEErrorSign ctermfg=red cterm=bold,inverse
+highlight ALEWarningSign ctermfg=green cterm=inverse
+highlight ALEInfoSign ctermfg=yellow cterm=inverse
+
+highlight ALEError ctermfg=red cterm=bold,inverse
+highlight ALEWarning ctermfg=green cterm=inverse
+highlight ALEInfo ctermfg=yellow cterm=inverse
