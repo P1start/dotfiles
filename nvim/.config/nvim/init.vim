@@ -135,6 +135,8 @@ highlight clear SpellCap
 highlight SpellBad cterm=inverse
 highlight SpellCap cterm=inverse
 highlight StatusLine ctermfg=grey ctermbg=black cterm=bold
+highlight StatusLineNC ctermfg=darkgrey cterm=italic
+highlight VertSplit cterm=none ctermfg=darkgrey
 highlight clear SignColumn
 highlight clear TabLine
 highlight clear TabLineSel
