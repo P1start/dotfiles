@@ -90,11 +90,16 @@ function fish_prompt --description 'Write out the prompt'
 	end
 
     set -l git_prompt
+    set -g is_git_repo
     if git branch >/dev/null 2>&1
+        set is_git_repo yes
+    end
+    if test -n "$is_git_repo"; or pijul status >/dev/null 2>&1
         set -l colour
         set -l IFS
         set -l git_status (git status 2>/dev/null)
-        if echo $git_status | grep Changes\ not\ staged >/dev/null
+        set -l pijul_status (pijul status 2>/dev/null)
+        if echo $git_status | grep Changes\ not\ staged >/dev/null; or echo $pijul_status | grep Changes\ not\ yet\ recorded >/dev/null
             set colour (set_color -o red)
         else if echo $git_status | grep Changes\ to\ be\ committed >/dev/null
             set colour (set_color green)
@@ -102,10 +107,16 @@ function fish_prompt --description 'Write out the prompt'
             set colour (set_color yellow)
         end
         set -l git_untracked
-        if echo $git_status | grep Untracked >/dev/null
+        if echo $git_status | grep Untracked >/dev/null; or echo $pijul_status | grep Untracked >/dev/null
             set git_untracked '*'
         end
-        set git_prompt ' ' $colour (__fish_git_prompt ' '|sed -e 's/ //g') (set_color yellow) $git_untracked
+        set -l prompt_pre
+        if test -n "$is_git_repo"
+            set prompt_pre (__fish_git_prompt ' '|sed -e 's/ //g')
+        else
+            set prompt_pre (pijul branches | grep '^\*' | awk '{print $2}')
+        end
+        set git_prompt ' ' $colour $prompt_pre (set_color yellow) $git_untracked
     end
 
     set -l jobs_indicator
@@ -118,5 +129,5 @@ function fish_prompt --description 'Write out the prompt'
     end
 
 	#echo -n -s $jobs_indicator $prompt_status (set_color $fish_color_user) "$USER" $normal ' ' (set_color $color_cwd) (prompt_pwd) $normal $git_prompt $normal $mode_str " $suffix "
-    echo -n -s $jobs_indicator $prompt_status (set_color $color_cwd) (prompt_pwd) $normal $git_prompt ' '
+    echo -n -s $jobs_indicator $prompt_status (set_color $color_cwd) (prompt_pwd) $normal $git_prompt ' ' (set_color normal)
 end

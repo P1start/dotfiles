@@ -6,6 +6,7 @@ set PATH ~/bin $PATH
 alias psgrep 'ps auxww|grep -v grep|egrep'
 alias , clear
 alias g git
+alias p pijul
 
 alias vim=nvim
 alias v=nvim
